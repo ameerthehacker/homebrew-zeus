@@ -30,14 +30,10 @@ class Zeus < Formula
   end
 
   def install
-    # Install the binary
     bin.install "bin/zeus"
-
-    # Install runtime (zig-out directory with compiled runtime)
     (prefix/"runtime/zig-out").install Dir["runtime/zig-out/*"]
-
-    # Install standard library
     (prefix/"lib").install Dir["lib/*"]
+    (prefix/"third_party/bdwgc/lib").install Dir["third_party/bdwgc/lib/*"]
   end
 
   def caveats
