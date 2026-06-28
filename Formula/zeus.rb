@@ -40,14 +40,8 @@ class Zeus < Formula
     <<~EOS
       Zeus has been installed successfully!
 
-      The Zeus compiler can now find its runtime and standard library automatically.
-      No additional configuration is needed.
-
-      To compile a Zeus program:
-        zeus build your_program.zs -o your_program
-
-      To run it:
-        ./your_program
+      To run a Zeus program:
+        zeus run main.zs
     EOS
   end
 
