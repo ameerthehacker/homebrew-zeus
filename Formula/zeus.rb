@@ -49,12 +49,12 @@ class Zeus < Formula
     # Create a simple test program
     (testpath/"hello.zs").write <<~EOS
       fn main() {
-        print("Hello, World!")
+        log("Hello, World!")
       }
     EOS
 
-    # Test that the compiler can compile a simple program
     system "#{bin}/zeus", "build", "hello.zs", "-o", "hello"
+    assert_equal "Hello, World!\n", shell_output("./hello")
   end
 end
 
