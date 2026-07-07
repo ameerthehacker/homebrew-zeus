@@ -48,7 +48,7 @@ class Zeus < Formula
   test do
     # Create a simple test program
     (testpath/"hello.zs").write <<~EOS
-      fn main() {
+      function main() {
         log("Hello, World!")
       }
     EOS
