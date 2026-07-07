@@ -12,20 +12,20 @@
 class Zeus < Formula
   desc "Zeus programming language compiler"
   homepage "https://github.com/ameerthehacker/zeus"
-  version "0.0.19-alpha"
+  version "0.0.20-alpha"
   license "MIT"
 
   on_macos do
     # ARM64 (Apple Silicon) - primary build
     on_arm do
       url "https://github.com/ameerthehacker/zeus/releases/download/v#{version}/zeus-#{version}-darwin-arm64.tar.gz"
-      sha256 "11d83199d824b74bde1b0534ede1a2fa0b8577fd2a3349e0de4a3f62f0b845b2"
+      sha256 "b54b02adc74a62180763e1231cdfca4e679414d056b489990521f39d32f980fc"
     end
 
     # Intel Macs - uses ARM64 binary via Rosetta 2
     on_intel do
       url "https://github.com/ameerthehacker/zeus/releases/download/v#{version}/zeus-#{version}-darwin-arm64.tar.gz"
-      sha256 "11d83199d824b74bde1b0534ede1a2fa0b8577fd2a3349e0de4a3f62f0b845b2"
+      sha256 "b54b02adc74a62180763e1231cdfca4e679414d056b489990521f39d32f980fc"
     end
   end
 
