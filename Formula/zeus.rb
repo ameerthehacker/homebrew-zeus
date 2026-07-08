@@ -48,9 +48,7 @@ class Zeus < Formula
   test do
     # Create a simple test program
     (testpath/"hello.zs").write <<~EOS
-      function main() {
-        log("Hello, World!")
-      }
+      console.log("Hello, World!")
     EOS
 
     system "#{bin}/zeus", "build", "hello.zs", "-o", "hello"
